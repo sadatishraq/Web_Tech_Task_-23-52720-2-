@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Admission Form</title>
+</head>
+<body>
+
+    <h1>University Admission Form</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" maxlength="50" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob" required><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label>College Name:</label><br>
+            <input type="text" name="college" maxlength="100" required><br><br>
+
+            <label>Preferred Department:</label><br>
+            <select name="department" required>
+                <option value="">Select Department</option>
+                <option>CSE</option>
+                <option>EEE</option>
+                <option>BBA</option>
+                <option>Architecture</option>
+            </select>
+            <br><br>
+
+            <label>Areas of Interest:</label><br>
+            <input type="checkbox" name="interest" value="Programming"> Programming
+            <input type="checkbox" name="interest" value="Robotics"> Robotics
+            <input type="checkbox" name="interest" value="Research"> Research
+            <br><br>
+
+            <label>Upload Transcript:</label><br>
+            <input type="file" name="transcript" required>
+            <br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
