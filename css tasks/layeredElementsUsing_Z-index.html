@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Layered Elements Using Z-index">
+    <title>Z-index Example</title>
+
+    <style>
+
+        .box {
+            width: 200px;
+            height: 120px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #box1 {
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        #box2 {
+            background-color: blue;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        #box3 {
+            background-color: green;
+            top: 150px;
+            left: 150px;
+            z-index: 3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box1" class="box">
+        Box 1
+    </div>
+
+    <div id="box2" class="box">
+        Box 2
+    </div>
+
+    <div id="box3" class="box">
+        Box 3
+    </div>
+
+</body>
+
+</html>
