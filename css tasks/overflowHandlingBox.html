@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Overflow Handling Box">
+    <title>Overflow Handling</title>
+
+    <style>
+
+        div {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        /* Content overflows outside the box */
+        #visible {
+            overflow: visible;
+        }
+
+        /* Extra content is hidden */
+        #hidden {
+            overflow: hidden;
+        }
+
+        /* Always shows scrollbars */
+        #scroll {
+            overflow: scroll;
+        }
+
+        /* Scrollbars appear only when needed */
+        #auto {
+            overflow: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Overflow Handling Example</h1>
+
+    <h2>Overflow: Visible</h2>
+
+    <div id="visible">
+
+        <p>
+            HTML and CSS are the foundation of web development. This text is intentionally
+            made very long so that it exceeds the fixed height of the box. The overflow
+            property controls how extra content is displayed when it does not fit inside
+            its container. This paragraph continues to make sure the content overflows. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, exercitationem? Iusto consequatur repellendus ex error labore! Earum optio repellendus incidunt ipsum voluptatem distinctio amet sunt consequuntur eaque perferendis! Similique, assumenda.
+        </p>
+
+    </div>
+
+    <br><br><br><br>
+
+    <h2>Overflow: Hidden</h2>
+
+    <div id="hidden">
+
+        <p>
+            HTML and CSS are the foundation of web development. This text is intentionally
+            made very long so that it exceeds the fixed height of the box. The overflow
+            property controls how extra content is displayed when it does not fit inside
+            its container. This paragraph continues to make sure the content overflows.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illo, aspernatur vel id a rerum repellendus delectus unde at, ea deleniti nihil. Placeat magnam nostrum tempore cum illo. Error, quibusdam!
+        </p>
+
+    </div>
+
+    <h2>Overflow: Scroll</h2>
+
+    <div id="scroll">
+
+        <p>
+            HTML and CSS are the foundation of web development. This text is intentionally
+            made very long so that it exceeds the fixed height of the box. The overflow
+            property controls how extra content is displayed when it does not fit inside
+            its container. This paragraph continues to make sure the content overflows.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsum ipsam facilis, est sunt excepturi? Debitis, accusantium est. Accusamus molestias provident corporis ad labore. Architecto reiciendis repudiandae sunt accusantium dignissimos?
+        </p>
+
+    </div>
+
+    <h2>Overflow: Auto</h2>
+
+    <div id="auto">
+
+        <p>
+            HTML and CSS are the foundation of web development. This text is intentionally
+            made very long so that it exceeds the fixed height of the box. The overflow
+            property controls how extra content is displayed when it does not fit inside
+            its container. This paragraph continues to make sure the content overflows.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione excepturi harum veritatis ex magnam dicta accusantium in, dolorem quaerat dolore doloremque quisquam amet asperiores, perspiciatis voluptate fuga corrupti nostrum totam!
+        </p>
+
+    </div>
+
+</body>
+
+</html>
