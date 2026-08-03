@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mohammed Sadat Ishraq Labib">
+        <meta name="description" content="Style Manipulation">
+        <title>Dynamic Style Control Panel</title>
+
+        <style>
+            #text{
+                width: 500px;
+                padding: 15px;
+                border: 2px solid black;
+                background-color: white;
+                font-size: 16px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Dynamic Style Control Panel</h2>
+        <p id="text">
+            Welcome to the Style Manipulation Demo. Click the buttons below
+            to change the appearance of this paragraph.
+        </p>
+        <br>
+        <button onclick="changeBackground()">
+            Change Background Color
+        </button>
+
+        <button onclick="increaseFont()">
+            Increase Font Size
+        </button>
+
+        <button onclick="centerText()">
+            Center Text
+        </button>
+
+        <button onclick="resetStyle()">
+            Reset Style
+        </button>
+        
+        <script>
+        let fontSize = 16;
+        
+        function changeBackground() 
+        {
+            document.getElementById("text").style.backgroundColor = "lightblue";
+        }
+
+        function increaseFont() 
+        {
+            fontSize += 2;
+            document.getElementById("text").style.fontSize = fontSize + "px";
+        }
+
+        function centerText() 
+        {
+            document.getElementById("text").style.textAlign = "center";
+        }
+
+        function resetStyle()
+        {
+            fontSize = 16;
+
+            document.getElementById("text").style.backgroundColor = "white";
+            document.getElementById("text").style.fontSize = "16px";
+            document.getElementById("text").style.textAlign = "left";
+
+        }
+
+    </script>
+
+    </body>
+</html>
