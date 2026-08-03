@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Dark and Light Mode Toggle">
+    <title>Portfolio Theme Toggle</title>
+
+    <style>
+
+        body {
+            background-color: white;
+            color: black;
+            margin: 0;
+        }
+
+        header,
+        main,
+        footer {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 15px;
+        }
+
+        .dark {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark header,
+        .dark main,
+        .dark footer {
+            background-color: #333;
+            border: 2px solid white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>My Portfolio</h1>
+
+        <button id="themeButton" onclick="toggleTheme()">
+            Switch to Dark Mode
+        </button>
+
+    </header>
+
+    <main>
+
+        <h2>About Me</h2>
+
+        <p>
+            Welcome to my portfolio website. I am Mohammed Sadat Ishraq Labib, a computer science student at American International University-Bangladesh (AIUB).
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Mohammed Sadat Ishraq Labib</p>
+
+    </footer>
+
+    <script>
+
+        let darkMode = false;
+
+        function toggleTheme() {
+
+            darkMode = !darkMode;
+
+            document.body.classList.toggle("dark");
+
+            if (darkMode) {
+                document.getElementById("themeButton").innerText = "Switch to Light Mode";
+            }
+            else {
+                document.getElementById("themeButton").innerText = "Switch to Dark Mode";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
