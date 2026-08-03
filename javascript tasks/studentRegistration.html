@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Student Registration Form Validation">
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <label>Full Name:</label><br>
+        <input type="text" id="fullname">
+        <br>
+        <span id="nameError"></span>
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="text" id="email">
+        <br>
+        <span id="emailError"></span>
+        <br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password">
+        <br>
+        <span id="passwordError"></span>
+        <br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirmPassword">
+        <br>
+        <span id="confirmPasswordError"></span>
+        <br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="text" id="phone">
+        <br>
+        <span id="phoneError"></span>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <h3 id="successMessage"></h3>
+
+    <script>
+
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            document.getElementById("confirmPasswordError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("successMessage").innerText = "";
+
+            let fullname = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let phone = document.getElementById("phone").value;
+
+            let valid = true;
+
+            if (fullname == "") {
+                document.getElementById("nameError").innerText = "Full Name is required.";
+                valid = false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                document.getElementById("emailError").innerText = "Enter a valid email.";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+                valid = false;
+            }
+
+            if (password != confirmPassword) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+                valid = false;
+            }
+
+            if (isNaN(phone) || phone == "") {
+                document.getElementById("phoneError").innerText = "Phone number must contain only digits.";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("successMessage").innerText = "Registration Successful!";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
