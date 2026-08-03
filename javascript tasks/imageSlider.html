@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Image Slider">
+    <title>Travel Image Slider</title>
+</head>
+
+<body>
+
+    <h2>Travel Destinations</h2>
+
+    <img id="slider"
+         src="/html tasks/images/paris.jpg"
+         alt="Travel Image"
+         width="500"
+         height="300">
+
+    <br><br>
+
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+
+        let images = [
+            "/html tasks/images/paris.jpg",
+            "/html tasks/images/maldives.jpg",
+            "/html tasks/images/swiz.jpg",
+            "/html tasks/images/japan.jpg",
+            "/html tasks/images/bali.jpg"
+        ];
+
+        let index = 0;
+
+        function showImage() {
+            document.getElementById("slider").src = images[index];
+        }
+
+        function nextImage() {
+
+            index++;
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            showImage();
+        }
+
+        function previousImage() {
+
+            index--;
+
+            if (index < 0) {
+                index = images.length - 1;
+            }
+
+            showImage();
+        }
+
+        setInterval(nextImage, 3000);
+
+    </script>
+
+</body>
+
+</html>
