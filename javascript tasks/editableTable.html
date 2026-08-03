@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Editable Student Table">
+    <title>Student Management System</title>
+</head>
+
+<body>
+
+    <h2>Student Management System</h2>
+
+    <label>Name:</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Roll:</label><br>
+    <input type="text" id="roll"><br><br>
+
+    <label>Department:</label><br>
+    <input type="text" id="department"><br><br>
+
+    <button onclick="addStudent()">Add Student</button>
+
+    <br><br>
+
+    <table border="1" cellpadding="10" id="studentTable">
+
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+
+    </table>
+
+    <script>
+
+        function addStudent() {
+
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("roll").value;
+            let department = document.getElementById("department").value;
+
+            if (name == "" || roll == "" || department == "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            let table = document.getElementById("studentTable");
+
+            let row = document.createElement("tr");
+
+            let nameCell = document.createElement("td");
+            nameCell.innerText = name;
+
+            let rollCell = document.createElement("td");
+            rollCell.innerText = roll;
+
+            let departmentCell = document.createElement("td");
+            departmentCell.innerText = department;
+
+            let actionCell = document.createElement("td");
+
+            let deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+
+            deleteButton.onclick = function () {
+                row.remove();
+            };
+
+            actionCell.appendChild(deleteButton);
+
+            row.appendChild(nameCell);
+            row.appendChild(rollCell);
+            row.appendChild(departmentCell);
+            row.appendChild(actionCell);
+
+            table.appendChild(row);
+
+            document.getElementById("name").value = "";
+            document.getElementById("roll").value = "";
+            document.getElementById("department").value = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
