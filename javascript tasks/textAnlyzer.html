@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Text Analyzer">
+    <title>Text Analyzer</title>
+
+    <style>
+
+        #result {
+            border: 2px solid black;
+            padding: 15px;
+            margin-top: 20px;
+            width: 500px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Text Analyzer</h2>
+
+    <textarea id="text" rows="8" cols="60"></textarea>
+
+    <br><br>
+
+    <button onclick="analyzeText()">Analyze Text</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        function analyzeText() {
+
+            let text = document.getElementById("text").value;
+
+            if (text.trim() == "") {
+
+                document.getElementById("result").innerHTML =
+                    "Please enter some text.";
+
+                return;
+            }
+
+            let characters = text.length;
+
+            let words = text.trim().split(/\s+/).length;
+
+            let reversed = text.split("").reverse().join("");
+
+            document.getElementById("result").innerHTML =
+                "<p><strong>Total Characters:</strong> " + characters + "</p>" +
+                "<p><strong>Total Words:</strong> " + words + "</p>" +
+                "<p><strong>Reversed Text:</strong> " + reversed + "</p>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
