@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Sadat Ishraq Labib">
+    <meta name="description" content="Dynamic Form Field Display">
+    <title>Smart Registration Form</title>
+</head>
+
+<body>
+
+    <h2>Smart Registration Form</h2>
+
+    <label>Select User Type:</label>
+
+    <select id="userType" onchange="showFields()">
+        <option value="">Select</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+    </select>
+
+    <br><br>
+
+    <div id="rollField" style="display: none;">
+
+        <label>Roll Number:</label><br>
+        <input type="text" id="roll">
+
+    </div>
+
+    <br>
+
+    <div id="departmentField" style="display: none;">
+
+        <label>Department:</label><br>
+        <input type="text" id="department">
+
+    </div>
+
+    <script>
+
+        function showFields() {
+
+            let userType = document.getElementById("userType").value;
+
+            if (userType == "Student") {
+
+                document.getElementById("rollField").style.display = "block";
+                document.getElementById("departmentField").style.display = "none";
+
+            }
+
+            else if (userType == "Teacher") {
+
+                document.getElementById("rollField").style.display = "none";
+                document.getElementById("departmentField").style.display = "block";
+
+            }
+
+            else {
+
+                document.getElementById("rollField").style.display = "none";
+                document.getElementById("departmentField").style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
