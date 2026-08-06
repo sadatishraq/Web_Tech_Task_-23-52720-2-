@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[74071],{974071:(e,n,a)=>{a.r(n),a.d(n,{PaymentPlanContainer:()=>p});var s=a(433171),l=a(46329);let p=({children:e,margin:n="0"})=>(0,s.jsx)(l.A,{sx:{padding:"30px 0 0 0",margin:n},children:e})}}]);
-//# sourceMappingURL=74071.73579157959bbb6a.js.map
